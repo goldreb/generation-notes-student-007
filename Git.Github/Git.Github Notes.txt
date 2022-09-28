@@ -1,0 +1,175 @@
+Git
+
+git init: this command sets up all the tools git needs to begin tracking changes made to the project. 
+
+git workflow:
+
+1. A working directory: Creating, editing, deleting and organizing files. 
+2. A staging Area: lists changes made to the working directory
+3. A repository: git permanently stores those changes as different versions of the project. 
+
+The Git workflow consists of editing files in the working directory, adding files to the staging area, and saving changes to a Git repository. In Git, we save changes with a commit.
+
+git status: Checks status of changes made to the working directory. In the output, if a file is red, it means it sees the file but has not started tracking changes yet.If green: Here Git tells us the file was added to the staging area.
+
+git add filename : This is how a file can be added to the staging area. 
+
+git diff filename : checks the difference between the working directory and the staging area. Changes to the file are marked with a + and are indicated in green.
+
+git commit -m "" A commit permanently stores changes from the staging area inside the repository. the -m is referred to as an option. Standard conventions for commit messages:
+
+1. must be in quotations
+2. written in present tense
+3. should be brief(50 characters or less)
+
+git log : allows you to refer back to an earlier version of a project. git log prints commits in chronological order. 
+In the output, notice:
+
+ - A 40-character code, called a SHA, that uniquely identifies the commit. This appears in orange text.
+ - The commit author (you!)
+ - The date and time of the commit
+ - The commit message
+
+
+
+git show HEAD : the commit you are currently on is known as the HEAD commit. In many cases, the most recently made commit is the HEAD commit. The output of this command will display everything the git log command displays for the HEAD commit, plus all the file changes that were committed.
+
+git checkout HEAD filename : will restore the file in your working directory to look exactly as it did when you last made a commit.
+
+git add filename1 filename2 adds multiple files to staging area. 
+
+git reset HEAD filename : This command resets the file in the staging area to be the same as the HEAD commit. It does not discard file changes from the working directory, it just removes them from the staging area.
+
+git reset commit_SHA : This command works by using the first 7 characters of the SHA of a previous commit. HEAD is now set to that previous commit. Example: git reset 1234567
+
+git stash :  will store your work temporarily for later use in a hidden directory.
+
+git stash pop :  retrieve the code you were working on previously, you can “pop” the work that was stored when you used git stash.
+
+git log --oneline : shows the list of commits in one line format.
+
+git log -S "keyword :   displays a list of commits that contain the keyword in the message
+
+git log --oneline --graph --graph : Displays a visual representation of how the branches and commits were created in order to help you make sense of your repository history. When used alone, the description can be very lengthy, so you can combine the command with --oneline in order to shorten the description.
+
+git commit --amend : allows you to correct mistakes and edit commits easily instead of creating a completely new one. It’s important to note that although it seems like --amend is simply updating the commit, what Git actually does is replace the whole previous commit
+
+git commit --amend --no-edit : does the same thing as git commit --amend without updating the commit message. 
+
+git aliases : If you have a set of commands that you use regularly and want to save some time from typing them, you can easily set up an alias for each command using Git config.
+
+Examples:
+$ git config --global alias.co "checkout"
+$ git config --global alias.br "branch"
+$ git config --global alias.glop "log --pretty=format:"%h %s" --graph"
+
+Once the aliases are configured, next time you want to check out to another branch you could type the command:
+
+$ git co example_branch
+
+Instead of:
+
+$ git checkout example_branch
+
+git branch : advises you on what branch your currently on. In the output, the * (asterisk) is showing you what branch you’re on. 
+
+git branch new_branch : allows us to create a new branch, Here new_branch would be the name of the new branch you create, like photos or blurb. Be sure to name your branch something that describes the purpose of the branch. Also, branch names can’t contain whitespaces: new-branch and new_branch are valid branch names, but new branch is not.
+
+git checkout branch_name : allows us to switch to the specified branch. Once you switch branches, you will now be able to make commits on the branch that have no impact on main.
+
+git merge branch_name : includes all changes made to one branch and merges to the main branch. 
+
+
+-----------------------------------------
+
+GitHub
+
+What is github?  GitHub is both a website and a service that facilitates software development by allowing you to store your code in containers, called repositories, and by tracking changes made to your code. In addition, it offers a hosting service and tools to build, test, and deploy code.
+
+Managing Branches: With Git, each teammate can create their own branch off of the main project in order to work on bug-fixes, new features, experimental code, etc. A branch is essentially a divergence from the main project. ​​When you branch out, git is essentially making a new state of your current code, upon which you can work, without affecting the important main state of the code. By using separate branches, the main project remains intact and unaffected before the changes are reviewed and merged into the project. The main branch is usually the working version of a project and contains the production code, so it’s very important to only merge clean and correct code into it!When someone wants to create a new feature, fix a bug, or just experiment, they should always create their own branch with a descriptive name.
+
+Adding And Committing Changes: You clone (download) the entire app repository from GitHub and create a branch for your feature of the main branch, and begin coding a new file in your local Git environment.
+
+After testing your code and ensuring that everything is running correctly, it’s time to push those changes with a commit!. You can commit along with a message describing your work, and lastly, push the commit to the remote Github repository.
+
+Creating a pull request: Pull Requests on GitHub allow collaborators to review and give feedback on proposed code changes before they are merged to the main branch. Through a process of discussion and potentially some extra code changes, the pull request can be ultimately approved, which means you can merge the changes into the official project on the main branch. When creating pull requests, it’s imperative that you include as much relevant detail in the description as possible in order to save review time. Add any comments or images that might be useful for your reviewer. It’s also important to ensure that your code is running properly with the updated repository in order to prevent anything from crashing. Lastly, you don’t want to submit a pull request with 50 files containing a plethora of changes, instead, stick to smaller-sized pull requests since they’re easier and faster to review.
+
+Reviewing and Merging a pull request: Once you’ve created a pull request, other members in your team can review it up on GitHub.The pull request should include a description and GitHub will display all the files with the changes created. Each line of code will have a clickable “+” button where you can add a comment in regards to the line. While reviewing, it’s important to be constructive with feedback and be precise about what needs to be changed. Here are few best practices when reviewing code: Don’t only comment on what should be changed, but why it should be changed. Feel free to provide resources to make your point. Be as clear as possible with your comments and make sure to be clear as to what to modify. Look at the bigger picture and try to spot potential errors. Would the submitted code produce any obstacles if the project scales?  
+Once all the feedback is added, collaborators can click on “Submit Review” and wait for a response. If all goes well, the pull request will eventually be merged into main. 
+
+Deleting a branch and review: Once changes are merged, in order to keep things organized and managed, it’s imperative to only keep active branches and delete the closed ones. 
+
+The Git Flow consists of:
+
+1. Create a branch
+2. commit changes
+3. open pull request
+4. review pull request
+5. merge
+6. Merge and delete branch
+
+
+
+
+git branch -d branch_name : n Git, branches are usually a means to an end. You create them to work on a new project feature, but the end goal is to merge that feature into the master branch. After the branch has been integrated into master, it has served its purpose and can be deleted. this command will delete the specified branch from the git project. use git branch -D branch_name to detele branches that were never merged into main. 
+
+git clone remote_location clone_name : remote_location tells Git where to go to find the remote. This could be a web address, or a filepath. clone_name is the name you give to the directory in which Git will clone the repository.
+
+git remote -v : ne thing that Git does behind the scenes when you clone.is give the remote address the name origin, so that you can refer to it more conveniently. this command allows us to see a list of a Git project’s remotes.
+
+git fetch : allows us to see if changes  been made to the remote and bring the changes down to your local copy. This command will not merge changes from the remote into your local repository. It brings those changes onto what’s called a remote branch. 
+
+git merge origin/master : new commits have been fetched to your local copy of the Git project, those commits are on the origin/master branch. Your local master branch has not been updated yet, so you can’t view or make changes the git merge command to integrate origin/master into your local master branch.
+
+git workflow for collaborations:
+
+Fetch and merge changes from the remote
+Create a branch to work on a new project feature
+Develop the feature on your branch and commit your work
+Fetch and merge from the remote again (in case new commits were made while you were working)
+Push your branch up to the remote for review
+
+git push origin <branch_name> : ill push your branch up to the remote, origin
+
+
+What is a pull request? A pull request is a feature of GitHub and other source code management tools to review code before merging it from one branch to another, usually the main branch. Each pull request has its own discussion forum, creating a place for collaborators to leave feedback.
+
+Writing a good pull request: 
+
+1. Concisely explain the purpose of the pull request in the title. If the pull request adds a new feature, go for something like “Add frontend component for settings page”. If it’s to fix a typo, be specific and say “Fix name typos on the Contact Us page”.
+
+2. The description is where all the juicy details are. You want the reviewers to know the thought process behind code changes and the options you have considered. It also helps to embed screenshots, GIFs, or even videos of your application so reviewers can anticipate what the code change in the pull request looks like.
+
+3. Make commit messages clear and use comments in code. 
+
+4. keep pull requests small and fast: Reduce the size of pull requests and respond to reviews quickly. Splitting big features into smaller parts is the best way to speed up review time. Not only does it result in less wasted work if the pull request gets rejected, but it will be easier to merge and review more thoroughly. Quickly respond to any feedback or requested changes
+
+What is git rebase? rebasing can be understood as “moving the base of a branch onto a different position” One of the major benefits of using Git rebase is that it eliminates unnecessary merge commits required by git merge. Most importantly, the history of the changes made in the main repository remains linear and follows a clear path of changes. This allows us to navigate the changes easier when viewing the changes in a log or graph.
+
+Git rebase: Reapplies commits on top of another base branch.
+
+Git merge: joins two or more development histories together (creating a new merge commit).
+
+Generally, it’s useful to use merge whenever we want to add changes of a branch back into the base branch. And rebase is useful whenever we want to add changes of a base branch back to a branched out branch. One common rule when using rebase is to only use it locally.
+-----------------------------------
+
+What is a .gitignore file? .gitignore is a plain text file that tells Git to intentionally ignore changes in certain files. This also ensures that no other contributor in the repository accidentally commits those files. Each line in .gitignore corresponds to a file, directory, or pattern we would like to ignore when staging. Using a .gitignore file results in cleaner staging areas and prevent files containing sensitive information from being committed. Some of the files or folders we should ignore include:
+
+Configuration files with API or secret keys such as .env
+Compiled binary files or production directories such as build or dist
+Log files
+Dependencies downloaded from a package manager such as node_modules
+System files such as thumbs.db on Windows or .DS_Store on macOS
+
+.gitignore is usually placed in the root directory of the repository. The filenames inside a .gitignore file can be written relative to the location of the .gitignore file.
+
+. Common directories to leave out of a Git repository are node_modules or logs folder. We can ignore an entire directory by simply adding its name to .gitignore: The forward slash / specifies that we are ignoring the directory.
+
+.gitignore patterns : We can take advantage of patterns to match multiple filenames. These help us handle special cases such as ignoring specific file types or ignoring all but one file inside a directory. Some examples of things that make up patterns are:
+
+Wildcard * to match 0 or more characters except for /. For example, adding *.html to .gitignore would ignore all files ending with the .html extension. example* would match any file starting with example such as example.txt or exampleHtmlFile.html.
+Negation ! as a prefix to negate any file that would otherwise be ignored. 
+
+Square brackets [] can be used to match a single character from a set of characters or a range of characters. Note that the range can be alphabetical: [a-z] or [A-Z], numeric [0-9], or a set of characters. If we added index.[a-i]* with both the square bracket and wildcard to .gitignore, we would ignore index.css and index.html but not index.js, since “j” is outside of the [a-i] range.
+Double asterisk ** is used to match 0 or more directories. If we had a temp folder inside all of the folders in the root directory and we only wanted to match files with the .log extension, we could use the pattern **/temp/*.log.
+Fill in the blank
