@@ -1,0 +1,93 @@
+HTML PART 1
+
+Intro to HTML:
+
+What it stands for: Hyper-text markup language
+
+What it does on our webpage: Html is known as the skeleton structure for websites. 
+
+HTML operates on a heirarchy using tags to hold elements that makeup the "skeleton" of a page.
+
+Elements: an individual componenet of an HTML document, it represents semantics or meaning: (example: the title element represents the title of the document.
+
+Attributes: 2 parts: name and value, these are placed inside the opening tag to define the characteristics of an element. 
+
+Common HTML Elements:
+
+<header></header< - Header
+<nav></nav> - Navigation
+<section></section> - Section
+<article></article> - Article
+<p></p> - Paragraph
+<aside></aside> - Aside
+<footer></footer> - Footer
+<h1></h1> - Header 1
+<div></div> - Divider
+<ul></ul> - Unordered List
+<ol></ol> - Ordered List
+<li></li> - List Item
+<main></main> - Main
+<img> - Image
+<body></body< - Body
+<strong></strong> - Bold
+<em></em> - Italics
+<button></button> - creates a button
+<a href="link.com"> - creates links
+<form></form> - creates Forms
+<input>
+<style></style> - Adds CSS
+<script></script> - Adds Javascript 
+
+------------------------------
+
+Learn HTML in 5 Minutes
+Video Link: https://www.youtube.com/watch?v=salY_Sm6mv4
+
+------------------------
+
+HTML Forms & Tables:
+
+forms: used to collect user input, the user input is most often sent to a server for processing. 
+
+making a form: can be done with these tags:
+<form>
+</form>
+
+Inside the form, you are able to use a combination of label and input elements to create the form data. 
+
+example:
+<form>
+<label for="firstName">First Name:</label>
+<input type="text" id="firstName" name="firstName">
+</form>
+
+
+Tables: used to allow web developers to arrange data into rows and columsn. They should NOT be used for styling purposes! This is against the best practices outlined in semantic HTML
+
+Elements of a Table:
+
+<table></table> - Allows creation of a table
+<tr></tr> - Table row
+<th></th> - Table Heading
+<td></td> - Table Data
+
+------------------------
+
+Semantic HTML:
+
+What is semantics?: The meaning of a word phrase, sentence, or text. This means the more specific we are, the less room we leave for misinterpretation and confusion. 
+
+Semantics in code: semantic elements are just elements with a meaning. 
+
+
+Elements of Semantic HTML
+
+<header></header> - Header
+<nav></nav> - Nav
+<section></section> - Section
+<article> - Article
+<p></p>  - paragraph
+<aside></aside> - Aside
+<footer></footer> - Footer
+
+Example of semantic and non semantic webpages: https://zchalk.github.io/SemanticHTML/
