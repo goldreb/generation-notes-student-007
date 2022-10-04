@@ -17,6 +17,12 @@
 |`content tag` | the content of the element |
 | `closing tag` | same as opening tag except it includes forward slash before the element ` (ex. </p>. </h1>) ` |
 
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+
 
 ### Nested Elements
 - elements that can be nested inside another element 
