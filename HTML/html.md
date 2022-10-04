@@ -12,7 +12,7 @@
 ![Element Anatomy](/HTML/html_img/anatomy_element.jpg)
 
 | Anatomy of Element Explanation |
-| _ _ _ _ _ _ _ _ _ _ _ _ _ _ _  |
+--- | --- | ---
 | `opening tag`| consist of the name of the element `(ex. <p>, <h1>)`|
 |`content tag` | the content of the element |
 | `closing tag` | same as opening tag except it includes forward slash before the element ` (ex. </p>. </h1>) ` |
