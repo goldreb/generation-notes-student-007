@@ -14,7 +14,7 @@
 
 
 | Anatomy of Element Explanation |
-| :------------- |:-------------:| -----:|
+| :------------- |:-------------:|
 | `opening tag`     | consist of the name of the element | `(ex. <p>, <h1>)`|
 | `content tag`     | the content of the element      |    |
 | `closing tag` | same as opening tag except it includes forward slash before the element      |    ` (ex. </p>. </h1>) ` |
@@ -22,7 +22,7 @@
 
 ### Nested Elements
 - elements that can be nested inside another element 
-`(ex. <p><em>_nested_</em></p>) `
+`(ex. <p><strong>**nested**</strong></p>) `
 ### Empty Elements
 - elements with no content.
 - consist of a single tag  
