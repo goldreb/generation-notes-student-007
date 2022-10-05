@@ -13,11 +13,11 @@
 
 
 
-| Anatomy of Element Explanation |
-| --- |:---|:--- |
-| `opening tag`     | consist of the name of the element | `(ex. <p>, <h1>)`|
-| `content tag`     | the content of the element      |    |
-| `closing tag` | same as opening tag except it includes forward slash before the element      |    ` (ex. </p>. </h1>) ` |
+| Anatomy of Element Explanation |                              |     |
+| ---                            |---                           |---  |
+| `opening tag`                  | consist of the name of the element | `(ex. <p>, <h1>)`|
+| `content tag`                  | the content of the element      |    |
+| `closing tag`                  | same as opening tag except it includes forward slash before the element      |    ` (ex. </p>. </h1>) ` |
 
 
 ### Nested Elements
