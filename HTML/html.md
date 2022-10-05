@@ -11,17 +11,13 @@
 ### Element Anatomy
 ![Element Anatomy](/HTML/html_img/anatomy_element.jpg)
 
-| Anatomy of Element Explanation |
---- | --- | ---
-| `opening tag`| consist of the name of the element `(ex. <p>, <h1>)`|
-|`content tag` | the content of the element |
-| `closing tag` | same as opening tag except it includes forward slash before the element ` (ex. </p>. </h1>) ` |
 
-| Tables        | Are           | Cool  |
+
+| Anatomy of Element Explanation |
 | ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+| `opening tag`     | consist of the name of the element | `(ex. <p>, <h1>)`|
+| `content tag`     | the content of the element      |    |
+| `closing tag` | same as opening tag except it includes forward slash before the element      |    ` (ex. </p>. </h1>) ` |
 
 
 ### Nested Elements
