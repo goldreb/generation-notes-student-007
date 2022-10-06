@@ -36,3 +36,14 @@
 - space between it and the element name. 
 - attribute name followed by equal sign.
 - wrapped with opening and closing qoutatin marks 
+
+## HTML Structure
+![html structure](/HTML/html_img/html_structure.jpg)
+
+`<!DOCTYPE>` - doctype is needed in the HTML for everything else to work. 
+`<html></html>` - this element wraps all the content on the page.
+`<head></head>` - acts as a container for everything you want to include on the HTML page.
+`<meta charset="utf-8">` - represents metadata that cannot be represented by other HTML meta related elements. `charset` attributes sets the character set for your document to UTF-8, which inlcudes most characters from the vas majority of human written language. 
+`<title></title>` - sets the title of the page, it will appear in the browser tab.
+`<body></body>` - contains all the content that display on the page.
+
