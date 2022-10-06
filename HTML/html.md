@@ -52,3 +52,20 @@
 
 > `<body></body>` - contains all the content that display on the page.
 
+## HTML basic fundamentals
+
+### Headings
+
+` 6 heading elements ` -- each element represents a different level of content in the document.
+![html headings](/HTML/html_img/html_headings.jpg) ![html headings document](/HTML/html_img/html_headings-live.jpg)
+
+` Best practices for html structure `
+- only use a single ` <h1> ` per page 
+- make sure to use correct order of heading hierachy.
+- of the six heading elements, aim to use no more than three per page, unless it is necessary.
+
+### Paragraphs
+
+` <p></p> ` - each paragraph has to be wrapped in a <p> element
+
+![paragraph](/HTML/html_img/html_paragraph.jpg)  ![paragraph document](/HTML/html_img/html_paragraph-live.jpg)
